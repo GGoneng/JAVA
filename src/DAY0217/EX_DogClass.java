@@ -46,7 +46,17 @@ public class EX_DogClass {
 
         EX_DogClass dog = new EX_DogClass();
 
-        System.out.println("dog => " + dog);
+        System.out.println("dog => " + dog); 
+
+        // 객체 속성 값 저장
+        dog.coatColor = "그레이";
+        dog.eyeColor = "블루";
+        dog.weight = 3.5f;
+
+
+        // 객체 메서드 사용
+        dog.bark("월월 크르릉 캥캥캥");
+        dog.tailing();
     }
     
 }
