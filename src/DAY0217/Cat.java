@@ -1,28 +1,27 @@
 package src.DAY0217;
 
-public class Cat {
-    String name;
-    float weight;
-    char gender;
-    int age;
+public class Cat extends Animal {
+    Cat() {
+        this("unknown", 0.f, 'M', 0);
+    }
 
     Cat(String name_, float weight_, char gender_, int age_) {
-        name = name_;
-        weight = weight_;
-        gender = gender_;
-        age = age_;
+        super(name_, weight_, gender_, age_);
     }
 
-    void bark() {
-        System.out.println("애옹");
+    @Override
+    void bark(String sound) {
+        System.out.println("[Cat] " + sound);
     }
 
+    @Override
     void move(String direction) {
-        System.out.println(name + " 이/가 " + direction + "으로 이동합니다.");
+        System.out.println("[Cat] " + super.name + " 이/가 " + direction + "으로 이동합니다.");
     } 
 
+    @Override
     void eat(String food) {
-        System.out.println(name + " 이/가 " + food + "을/를 먹습니다.");
+        System.out.println("[Cat] " + super.name + " 이/가 " + food + "을/를 먹습니다.");
     }
 
 }
